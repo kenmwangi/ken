@@ -3,7 +3,7 @@ import Heading from "../Heading";
 
 const Hero = () => {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-12 sm:py-16">
       <div className="max-w-2xl  lg:mx-0">
         <Heading
           primary

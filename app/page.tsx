@@ -1,13 +1,14 @@
 import React from "react";
 import Container from "./components/Container";
 import Hero from "./components/Hero";
+import Blogs from "./components/Blogs";
 
 const Home = () => {
   return (
     <div>
       <Container>
         <Hero />
-        <h1>Home</h1>
+        <Blogs />
       </Container>
     </div>
   );

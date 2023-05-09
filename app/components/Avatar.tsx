@@ -8,7 +8,7 @@ interface AvatarProps {
 const Avatar = ({ src }: AvatarProps) => {
   return (
     <Image
-      src={src || `images/placeholder.jpg`}
+      src={src || `/images/placeholder.jpg`}
       className="rounded-full"
       width="30"
       height="30"
