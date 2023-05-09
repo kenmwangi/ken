@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <section className="border-t-[1px] border-neutral-100 pt-10">
       <Container>
-        <div className="lg:flex items-center">
+        <div className="lg:flex flex-row items-center">
           <div className="flex mb-6 lg:mb-0 lg:mr-18 items-center">
             <Link
               href="/"
@@ -16,16 +16,14 @@ const Footer = () => {
             >
               <FaGithub size={18} />
             </Link>
-          </div>
-          <div className="flex mb-6 lg:mb-0 lg:mr-18 items-center">
+
             <Link
               href="/"
               className="inline-block text-neutral-500 mr-5 hover:text-slate-800 rounded-md p-1"
             >
               <FaTwitter size={18} />
             </Link>
-          </div>
-          <div className="flex mb-6 lg:mb-0 lg:mr-18 items-center">
+
             <Link
               href="/"
               className="inline-block text-neutral-500 mr-5 hover:text-slate-800 rounded-md p-1"
