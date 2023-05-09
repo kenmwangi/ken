@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { greatVibes } from "./styles/style";
+import Footer from "./components/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={greatVibes.className}>{children}</body>
+      <body className={greatVibes.className}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
