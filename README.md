@@ -5,4 +5,4 @@ I will try to write about my full stack development journey, open-source contrib
 
 ## Features
 
-- Next 13 Server Components
+- Next 13 Server Components - app (stable)
