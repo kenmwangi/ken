@@ -2,6 +2,13 @@ import React from "react";
 import { allBlogs } from "contentlayer/generated";
 import Link from "next/link";
 import Container from "app/components/Container";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog | Ken Mwangi",
+  description:
+    "Indulge into my thoughts, software development and open-source contributions",
+};
 
 const BlogPage = () => {
   return (
