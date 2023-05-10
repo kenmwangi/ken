@@ -7,3 +7,5 @@ I will try to write about my full stack development journey, open-source contrib
 
 - Content generation - using ContentLayer instead of Mdx files
 - Nextauth authentication and authorization.
+
+I will add more features as I grow
