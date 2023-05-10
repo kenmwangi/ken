@@ -5,5 +5,4 @@ I will try to write about my full stack development journey, open-source contrib
 
 ## Features
 
-- Content generation - using ContentLayer instead of Mdx files
-- Nextauth authentication and authorization.
+- Next 13 Server Components
