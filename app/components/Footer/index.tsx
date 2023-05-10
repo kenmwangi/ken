@@ -34,13 +34,13 @@ const Footer = () => {
           <div className="flex mb-6 ml-auto lg:mb-0 items-center">
             <Link
               href="/about"
-              className="inline-block mr-4 sm:mr-10 text-sm font-semibold text-gray-500"
+              className="inline-block mr-4 sm:mr-10 text-xs font-semibold text-gray-500"
             >
               About
             </Link>
             <Link
               href="/thoughts"
-              className="inline-block mr-4 sm:mr-10 text-sm font-semibold text-gray-500"
+              className="inline-block mr-4 sm:mr-10 text-xs font-semibold text-gray-500"
             >
               Thoughts
             </Link>
