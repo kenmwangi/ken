@@ -23,6 +23,9 @@ var Blog = defineDocumentType(() => ({
       type: "string",
       required: true
     },
+    author: {
+      type: "string"
+    },
     summary: {
       type: "string",
       required: true
@@ -72,4 +75,4 @@ export {
   Blog,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-M3S6GQAC.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-WXIDJDFZ.mjs.map

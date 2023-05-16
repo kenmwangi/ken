@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const BlogPage = () => {
   return (
-    <Container>
+    <section className="max-w-screen-lg m-auto min-h-[70%]  pb-20">
       <h1 className="font-bold text-3xl font-serif mb-5">Blog</h1>
       {allBlogs
         .sort((first, second) => {
@@ -27,7 +27,7 @@ const BlogPage = () => {
             <p>{post.summary}</p>
           </div>
         ))}
-    </Container>
+    </section>
   );
 };
 

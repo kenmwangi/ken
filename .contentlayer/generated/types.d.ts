@@ -15,6 +15,7 @@ export type Blog = {
   type: 'Blog'
   title: string
   publishedAt: string
+  author?: string | undefined
   summary: string
   image?: string | undefined
   /** MDX file body */
