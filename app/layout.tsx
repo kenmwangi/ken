@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={greatVibes.className}>
+      <body className={`${inter.className} bg-gray-50`}>
         <Container>{children}</Container>
         <Footer />
       </body>

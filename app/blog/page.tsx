@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const BlogPage = () => {
   return (
     <section className="max-w-screen-lg m-auto min-h-[70%]  pb-20">
-      <h1 className="font-bold text-3xl font-serif mb-5">Blog</h1>
+      <h1 className="font-extrabold text-5xl mb-16 mt-8">Blog</h1>
       {allBlogs
         .sort((first, second) => {
           if (new Date(first.publishedAt) > new Date(second.publishedAt)) {
