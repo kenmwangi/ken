@@ -4,7 +4,7 @@ import React from "react";
 const navItems = [
   { id: "1", href: "/blog", title: "Blog" },
   { id: "2", href: "/thoughts", title: "Thoughts" },
-  { id: "3", href: "/about", title: "About" },
+  // { id: "3", href: "/about", title: "About" },
 ];
 
 const UserMenu = () => {

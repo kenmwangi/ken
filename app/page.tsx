@@ -2,14 +2,14 @@ import React from "react";
 import Container from "./components/Container";
 import Hero from "./components/Hero";
 import Blogs from "./components/Blogs";
+import Intro from "./components/Intro";
 
 const Home = () => {
   return (
     <div>
-      <Container>
-        <Hero />
-        <Blogs />
-      </Container>
+      <Intro />
+      {/* <Hero /> */}
+      {/* <Blogs /> */}
     </div>
   );
 };
