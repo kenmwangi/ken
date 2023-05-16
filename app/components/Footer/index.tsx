@@ -6,7 +6,7 @@ import Container from "../Container";
 
 const Footer = () => {
   return (
-    <section className="border-t-[1px] border-neutral-100 pt-10">
+    <section className="border-t-[1px] border-neutral-100 p-12">
       <Container>
         <div className="lg:flex flex-row items-center">
           <div className="flex mb-6 lg:mb-0 lg:mr-18 items-center">
