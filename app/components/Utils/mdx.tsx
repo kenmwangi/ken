@@ -37,7 +37,7 @@ interface MdxProps {
 const Mdx = ({ code }: MdxProps) => {
   const Component = useMDXComponent(code);
   return (
-    <article className="prose lg:prose-base mx-auto prose-quoteless prose-neutral">
+    <article className="prose w-full max-w-screen-md sm:mx-auto lg:prose-base mx-auto prose-quoteless prose-neutral">
       <Component components={{ ...components }} />
     </article>
   );
