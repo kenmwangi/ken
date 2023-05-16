@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Container from "../Container";
 
 const footerNavs = [
-  { id: "1", href: "/about", title: "About" },
+  // { id: "1", href: "/about", title: "About" },
   { id: "2", href: "/blog", title: "Blog" },
   { id: "3", href: "/thoughts", title: "Thoughts" },
 ];
@@ -32,7 +32,7 @@ const Footer = () => {
                 <Link
                   key={id}
                   href={href}
-                  className="hover:bg-neutral-100 text-sm transition rounded-full px-3 py-1.5  hover:text-slate-600"
+                  className="hover:bg-neutral-100 text-sm transition rounded-full pr-3 py-1.5  hover:text-slate-600"
                 >
                   {title}
                 </Link>
