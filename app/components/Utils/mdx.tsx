@@ -3,7 +3,7 @@ import Link from "next/link";
 import * as React from "react";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
-const CustomLink = (props: any) => {
+const CustomLink = (props) => {
   const href = props.href;
 
   if (href.startsWith("/")) {
@@ -21,7 +21,7 @@ const CustomLink = (props: any) => {
   return <a target="_blank" rel="noopener noreferrer" {...props} />;
 };
 
-function RoundedImage(props: any) {
+function RoundedImage(props) {
   return <Image alt={props.alt} className="rounded-lg" {...props} />;
 }
 
