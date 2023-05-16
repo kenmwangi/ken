@@ -12,21 +12,45 @@ export const metadata: Metadata = {
 
 const BlogPage = () => {
   return (
-    <section className="max-w-screen-lg m-auto min-h-[70%]  pb-20">
-      <h1 className="font-extrabold text-5xl mb-16 mt-8">Blog</h1>
-      {allBlogs
-        .sort((first, second) => {
-          if (new Date(first.publishedAt) > new Date(second.publishedAt)) {
-            return -1;
-          }
-          return 1;
-        })
-        .map((post) => (
-          <div key={post.slug} className="w-full flex-col space-y-1 mb-4">
-            <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-            <p>{post.summary}</p>
-          </div>
-        ))}
+    <section className="max-w-screen-lg m-auto min-h-full  pb-20">
+      <h1 className="font-extrabold px-[18px] text-5xl mb-16 mt-8 text-slate-800">
+        Blog
+      </h1>
+      <div className="w-screen lg:w-full">
+        {allBlogs
+          .sort((first, second) => {
+            if (new Date(first.publishedAt) > new Date(second.publishedAt)) {
+              return -1;
+            }
+            return 1;
+          })
+          .map((post) => {
+            const date = new Date(post.publishedAt);
+            const formattedDate = new Intl.DateTimeFormat("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "2-digit",
+            }).format(date);
+            return (
+              <Link key={post.slug} href={`/blog/${post.slug}`}>
+                <div className="cursor flex-col px-[12px] border-gray-300 bg-gray-50 filter-none hover:bg-gray-200 md:flex lg:rounded-lg">
+                  <div className="py-[18px] flex flex-col justify-between leading-normal border-t border-gray-100 flex-[3]">
+                    <div className="my-2">
+                      <p className="text-2xl font-bold text-slate-900">
+                        {post.title}
+                      </p>
+                    </div>
+                    <p className="text-lg text-slate-500">{post.summary}</p>
+                    <div className="flex text-xs my-[18px] text-gray-500 items-center">
+                      <span>{post.author}</span> &nbsp; . &nbsp;{" "}
+                      <span>{formattedDate}</span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+      </div>
     </section>
   );
 };
