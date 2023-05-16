@@ -36,8 +36,36 @@ var Blog = defineDocumentType(() => ({
   },
   computedFields
 }));
+var Thought = defineDocumentType(() => ({
+  name: "Thought",
+  filePathPattern: `**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true
+    },
+    publishedAt: {
+      type: "string",
+      required: true
+    },
+    author: {
+      type: "string"
+    },
+    summary: {
+      type: "string",
+      required: true
+    },
+    image: {
+      type: "string"
+    }
+  },
+  computedFields
+}));
 var contentlayer_config_default = makeSource({
-  contentDirPath: "content",
+  contentDirPath: "content/blog",
+  // thoughtDirPath: "content/thoughts",
+  // documentTypes: [Blog, Thought],
   documentTypes: [Blog],
   mdx: {
     remarkPlugins: [remarkGfm],
@@ -73,6 +101,7 @@ var contentlayer_config_default = makeSource({
 });
 export {
   Blog,
+  Thought,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-WXIDJDFZ.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-GGG7TWQ6.mjs.map

@@ -1,78 +1,71 @@
+// contentlayer.config.js
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
-
-const computedFields = {
+var computedFields = {
   slug: {
     type: "string",
-    resolve: (doc) => doc._raw.flattenedPath,
-  },
+    resolve: (doc) => doc._raw.flattenedPath
+  }
 };
-
-// Blog
-export const Blog = defineDocumentType(() => ({
+var Blog = defineDocumentType(() => ({
   name: "Blog",
   filePathPattern: `**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
       type: "string",
-      required: true,
+      required: true
     },
     publishedAt: {
       type: "string",
-      required: true,
+      required: true
     },
     author: {
-      type: "string",
+      type: "string"
     },
     summary: {
       type: "string",
-      required: true,
+      required: true
     },
     image: {
-      type: "string",
-    },
+      type: "string"
+    }
   },
-  computedFields,
+  computedFields
 }));
-
-// Thoughts
-export const Thought = defineDocumentType(() => ({
+var Thought = defineDocumentType(() => ({
   name: "Thought",
   filePathPattern: `**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
       type: "string",
-      required: true,
+      required: true
     },
     publishedAt: {
       type: "string",
-      required: true,
+      required: true
     },
     author: {
-      type: "string",
+      type: "string"
     },
     summary: {
       type: "string",
-      required: true,
+      required: true
     },
     image: {
-      type: "string",
-    },
+      type: "string"
+    }
   },
-  computedFields,
+  computedFields
 }));
-
-export default makeSource({
-  contentDirPath: "content/blog",
-  // thoughtDirPath: "content/thoughts",
-
-  // documentTypes: [Blog, Thought],
-  documentTypes: [Blog],
+var contentlayer_config_default = makeSource({
+  // contentDirPath: "content",
+  contentDirPath: ["content/blog", "content/thoughts"],
+  documentTypes: [Blog, Thought],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
@@ -82,8 +75,6 @@ export default makeSource({
         {
           theme: "one-dark-pro",
           onVisitLine(node) {
-            // Prevent lines from collapsing in `display: grid` mode, and allow empty
-            // lines to be copy/pasted
             if (node.children.length === 0) {
               node.children = [{ type: "text", value: " " }];
             }
@@ -93,17 +84,23 @@ export default makeSource({
           },
           onVisitHighlightedWord(node) {
             node.properties.className = ["word--highlighted"];
-          },
-        },
+          }
+        }
       ],
       [
         rehypeAutolinkHeadings,
         {
           properties: {
-            className: ["anchor"],
-          },
-        },
-      ],
-    ],
-  },
+            className: ["anchor"]
+          }
+        }
+      ]
+    ]
+  }
 });
+export {
+  Blog,
+  Thought,
+  contentlayer_config_default as default
+};
+//# sourceMappingURL=compiled-contentlayer-config-M5G2FW4D.mjs.map
