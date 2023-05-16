@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { allBlogs } from "contentlayer/generated";
 import React from "react";
 import { Balancer } from "react-wrap-balancer";
-import Mdx from "app/components/Utils/mdx";
+import Mdx from "app/Utils/mdx";
 import { getMDXComponent } from "next-contentlayer/hooks";
 import Link from "next/link";
 
